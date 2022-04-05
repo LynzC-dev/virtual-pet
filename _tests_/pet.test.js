@@ -29,7 +29,7 @@ describe('constructor', () => {
 
     pet.growUp();
 
-    expect(pet.hunger).toEqual(10);
+    expect(pet.hunger).toEqual(5);
   })
   it('increase fitness by 3', () => {
     const pet = new Pet ('Fido');
@@ -82,7 +82,6 @@ describe('constructor', () => {
     it('if fitness is 3 or less, return I need a walk', () => {
       const pet = new Pet('fido');
         pet.fitness = 1
-        pet.hunger = 4
         pet.checkUp()
 
         expect(pet.checkUp()).toBe('I need a walk');
