@@ -20,4 +20,13 @@ Pet.prototype.walk = function () {
     }
 }
 
+Pet.prototype.feed = function () {
+    const MIN_HUNGER = 0;
+    if ( (this.hunger - 3) >= MIN_HUNGER) {
+        this.hunger -= 3; 
+     } else {
+        this.hunger = MIN_HUNGER;
+     }
+ }
+
 module.exports = Pet;
