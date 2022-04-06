@@ -13,7 +13,13 @@ describe('constructor', () => {
       const pet = new Pet('Fido');
       expect(pet.age).toEqual(0);
     });
-   
+    it ('is alive', () => {
+      const pet = new Pet('Fido');
+      pet.hunger = 4
+      pet.age = 10
+      pet.fitness =5
+      expect(pet.isAlive).toBe(true);
+    })
   });
 
   describe ('growUp', () => {
